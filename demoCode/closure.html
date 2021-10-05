@@ -1,0 +1,23 @@
+<script>
+    let Account = function (moneyInBank) {
+      let saving = moneyInBank;
+  
+      return {
+        get() {
+          console.log('存款',saving)
+        },
+        save(saveMoney) {
+  
+          (saving += saveMoney);
+          console.log('存款',saving)
+        },
+  
+      }
+    }
+  
+    let TS_account = Account(100);
+    console.log(TS_account)
+  
+  
+    let Esun_account = Account(10000);
+  </script>

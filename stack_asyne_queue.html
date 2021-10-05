@@ -1,0 +1,48 @@
+<script>
+
+
+setTimeout(function(){
+   console.log('timer: 1000ms')
+}, 1000)
+
+setTimeout(function(){
+   console.log('timer: 2000ms')
+}, 2000)
+
+setTimeout(function(){
+   console.log('timer: 0ms')
+}, 0)
+
+
+
+function fn1(){
+   console.log('start fn1');
+   greeting();
+   console.log('done fn1')
+}
+
+
+function greeting(){
+   console.log('Hello Stack')
+}
+
+
+fn1();
+
+
+
+
+
+setTimeout(function(){
+   console.log('timer: 1000ms')
+}, 1000)
+
+setTimeout(function(){
+   console.log('timer: 2000ms')
+}, 2000)
+
+setTimeout(function(){
+   console.log('timer: 0ms')
+}, 0)
+
+</script>

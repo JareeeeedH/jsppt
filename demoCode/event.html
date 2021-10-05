@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event Demo</title>
+
+    <style>
+        .box1{
+            width: 600px;
+            height: 600px;
+            background: rgb(243, 247, 34);
+        }
+
+        .box2{
+            width: 500px;
+            height: 500px;
+            background: rgb(231, 9, 9);
+        }
+
+        .box3{
+            width: 300px;
+            height: 300px;
+            background: rgb(43, 107, 96);
+        }
+
+        .box4{
+            width: 200px;
+            height: 200px;
+            background: rgb(220, 135, 223);
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM, event Demo</h1>
+
+
+    <div class="box box1">111
+        <div class="box box2">222
+            <div class="box box3">333
+                <div class="box box4">444</div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+
+
+
+    let oBtns = document.querySelectorAll('.box');
+    
+    // oBtns[0].addEventListener('click', function(evt){
+    //     console.log('111')
+    // })
+
+    // oBtns[1].addEventListener('click', function(evt){
+    //     console.log('222')
+    // })
+
+    // oBtns[2].addEventListener('click', function(evt){
+    //     console.log('333')
+    // })
+
+    // oBtns[3].addEventListener('click', function(evt){
+    //     console.log('444')
+    // })
+ 
+
+    oBtns[0].addEventListener('click', function(evt){
+        console.log('111');
+        console.log(evt)
+    }, { capture: true, } )
+
+    oBtns[1].addEventListener('click', function(evt){
+        console.log('222')
+    }, { capture: true, } )
+
+    oBtns[2].addEventListener('click', function(evt){
+        console.log('333')
+    }, { capture: true, } )
+
+    oBtns[3].addEventListener('click', function(evt){
+        console.log('444')
+    }, { capture: true, } )
+
+
+
+    </script>
+</body>
+</html>

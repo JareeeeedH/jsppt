@@ -1,0 +1,20 @@
+
+<script>
+
+
+let userData = {
+  user: 'jared',
+  password: 888
+}
+
+function hello(){
+  console.log(this); //default -> window
+  console.log(this.user, this.password)
+}
+
+console.dir(hello);
+
+
+hello.call(userData)
+
+</script>

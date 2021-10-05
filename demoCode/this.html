@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="box" style='width: 200px; height: 200px; border: 1px solid black'>BOX</div>
+
+    <div id="box2" style='width: 200px; height: 200px; border: 1px solid black'>BOX</div>
+</body>
+
+
+<script>
+
+// console.log(this)
+
+
+// let oDiv = document.getElementById('box');
+// oDiv.addEventListener('click',function(){
+//     console.log(this)
+// })
+
+
+// let oDivWithArror = document.getElementById('box2');
+// oDivWithArror.addEventListener('click',()=>{
+//     console.log(this)
+// })
+
+
+let oDiv = document.getElementById('box');
+oDiv.addEventListener('click',function(){
+    console.log(this);
+
+    // 將this存放變數，內部取用，或者使用箭頭函示
+    // let self = this;
+
+    setTimeout(function(){
+        console.log(this);
+        // console.log(self)
+    }, 1000)
+})
+
+
+
+
+</script>
+</html>

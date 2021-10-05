@@ -1,0 +1,36 @@
+<script>
+
+// 定義模擬非同步事件
+function getData(name, callback){
+  setTimeout(()=>{
+
+    callback({name:name, age: Math.floor(Math.random()*100)})
+
+  },2000)
+};
+
+// 定義模擬非同步事件
+function checkAge(age, callback){
+
+  if(age <50){
+    setTimeout(function(){
+      callback(age,'so Young')
+    },2000)
+  }else{
+    setTimeout(function(){
+      callback(age,'so old')
+    },2000)
+  }
+
+};
+
+
+// invoke
+getData('jared', function(object){
+
+  console.log(object);
+
+  checkAge(object.age, function(age, Str){
+    console.log(age, Str)
+  })})
+</script>

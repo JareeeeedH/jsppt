@@ -1,0 +1,31 @@
+
+
+<script>
+
+function Student(name, id, major){
+
+  this.name = name;
+  this.id = id;
+  this.major = major;
+
+  this.greeting = function(){ 
+    console.log(`hi i'm ${this.name}`)
+  }
+
+}
+
+
+
+
+let jared = new Student('jared', 168888, 'business');
+let eric = new Student('eric', 66666, 'math');
+
+
+console.log(jared);
+console.log(eric)
+
+jared.greeting();
+eric.greeting();
+
+
+</script>
